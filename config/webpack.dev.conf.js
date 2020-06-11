@@ -4,6 +4,7 @@ const baseConf = require('./webpack.base.conf');
 
 module.exports = merge(baseConf, {
   mode: 'development',
+  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
     compress: true,
