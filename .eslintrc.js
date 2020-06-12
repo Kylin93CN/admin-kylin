@@ -4,6 +4,7 @@ module.exports = {
     es2020: true,
     node: true,
   },
+  parser: 'babel-eslint',
   extends: ['airbnb', 'airbnb/hooks'],
   parserOptions: {
     ecmaFeatures: {

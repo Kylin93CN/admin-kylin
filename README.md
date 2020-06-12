@@ -1,4 +1,4 @@
-## 个人后台管理
+## 个人后台管理（monorepo）
 ```
 admin-kylin
 ├─.babelrc
@@ -8,27 +8,30 @@ admin-kylin
 ├─README.md
 ├─package.json
 ├─prettier.config.js
-├─src   #前端代码
-├─server    #后端代码
+├─src   # 前端代码
+├─server    # 后端代码
 ├─public
 |   └index.html
-├─dist    #产物
+├─dist    # 产物
 |  ├─app.js
 |  └index.html
-├─config    #入口
+├─config    # 入口
 |   ├─webpack.base.conf.js
 |   ├─webpack.dev.conf.js
 |   └webpack.prod.conf.js
 ```
 
+使用最新的一套技术搭建后台管理系统，可能会遇到各种坑~~~
+填坑日记会写在[issue](https://github.com/Kylin93CN/admin-kylin/issues)中.
+
 ## 技术栈
 
 ### 前端技术栈
-- react 16
+- react 16.13+
 - react-hooks
-- ahooks
+- ahooks 1.0
 - ant design 4
-- webpack 4
+- webpack 4.30+
 - react router 5
 - babel 7
 - hox

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
@@ -10,10 +11,6 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].js',
   },
-  // // 关闭webpack 自动压缩 混淆 代码
-  // optimization: {
-  //   minimize: true, // <---- 禁用 uglify.
-  // },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
@@ -23,10 +20,13 @@ module.exports = {
   module: {
     rules: [
       {
-        // 所有的js 都进过 babel-loader 处理
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: '/node_modules/',
+        exclude: path.resolve(__dirname, '../node_modules'),
+      },
+      {
+        test: /antd.*\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.less$/,
@@ -35,9 +35,18 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-              modules: true,
-              // localIdentName: '[local]___[hash:base64:5]',
+              importLoaders: 2,
+              modules: {
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+              },
+              sourceMap: true,
+              localsConvention: 'camelCase',
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [autoprefixer],
             },
           },
           'less-loader',
