@@ -22,5 +22,8 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     // 允许jsx存在js中
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'arrow-parens': 'off',
+    'global-require': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
