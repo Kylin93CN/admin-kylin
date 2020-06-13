@@ -22,7 +22,10 @@ admin-kylin
 ```
 
 使用最新的一套技术搭建后台管理系统，可能会遇到各种坑~~~
+
 填坑日记会写在[issue](https://github.com/Kylin93CN/admin-kylin/issues)中.
+
+欢迎star✨✨
 
 ## 技术栈
 
