@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: lightcyan;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/login-bg.jpeg) no-repeat;
+  .login-form {
+    width: 200px;
+    height: 200px;
+    .login-form-button {
+      :global {
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      
+    }
+  }
+}
