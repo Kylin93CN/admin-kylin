@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import Main from './Layout/Main';
-import Login from './Pages/Login';
+import Main from './layouts/Main';
+import Login from './pages/Login';
 
 const Routes = () => {
   console.log('');
